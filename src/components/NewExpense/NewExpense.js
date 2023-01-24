@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Wrapper from '../Helpers/Wrapper';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 
@@ -25,10 +26,10 @@ const NewExpense = (props) => {
 
 
     return (
-        <div className='new-expense'>
+        <Wrapper className='new-expense'>
            {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
            {isEditing &&  <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel={cancelFormHandler}/>}
-        </div>
+        </Wrapper>
     )
 }
 
